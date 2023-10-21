@@ -82,6 +82,18 @@ nav {
   ul {
     list-style-type: none;
     margin-top: 0;
+    padding-left: 2rem;
+    padding-right: 2rem;
+
+    li {
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid white;
+
+      &:first-child {
+        border-top: 1px solid white;
+      }
+    }
   }
 
   a {
@@ -107,15 +119,14 @@ nav {
   position: fixed;
   z-index: 100;
   top: 0;
-  left: 1rem;
-  width: 3rem;
-  height: 3rem;
-  padding: 0;
+  left: 0;
+  background: white;
+  padding: 10px 10px 6px 10px;
   margin: 0;
   border-width: 0;
-  background: transparent;
   cursor: pointer;
   display: none;
+  border-bottom-right-radius: 5px;
 
   @media (max-width: 992px) {
     display: block;
@@ -130,7 +141,7 @@ nav {
     background: var(--palette-dark-blue);
 
     .handles {
-      fill: var(--palette-light-blue);
+      fill: white;
     }
   }
 }
