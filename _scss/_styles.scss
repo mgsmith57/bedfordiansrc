@@ -92,7 +92,7 @@ nav {
     right: 0;
     width: 100%;
     height: 100vh;
-    transform: translateY(-100%);
+    transform: translateY(-200%);
     padding-top: 4rem;
   }
 
@@ -215,5 +215,76 @@ main {
 
   dd {
     margin-bottom: 0.25rem;
+  }
+}
+
+.calendar {
+  .calendar-month {
+    clear: both;
+    margin-top: 2rem;
+    min-height: 4.5rem;
+
+    h3 {
+      background: var(--palette-dark-blue);
+      color: white;
+      padding: 0.25rem;
+    }
+  }
+
+  .calendar-event {
+    clear: both;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    padding-left: 6rem;
+    border-top: 1px solid var(--palette-dark-blue);
+    position: relative;
+    min-height: 4.5rem;
+
+    &:first-of-type {
+      border-top-width: 0;
+    }
+
+    &:before {
+      content: "Club Event";
+      font-size: 0.9rem;
+      background: var(--palette-dark-blue);
+      color: white;
+      padding: 2px 6px;
+      display: inline-block;
+      float: right;
+    }
+
+    &.individual:before {
+      content: "Individual Event";
+      background: var(--palette-red);
+    }
+
+    .event-day {
+      position: absolute;
+      left: 0;
+      top: 1.5rem;
+      font-size: 2rem;
+      display: block;
+      min-width: 4rem;
+      border: 1px solid #aaa;
+      line-height: 3.5rem;
+      border-radius: 6px;
+      padding-left: 0.25rem;
+      padding-right: 0.25rem;
+      margin-bottom: 1.5rem;
+      margin-right: 1.5rem;
+      background: antiquewhite;
+    }
+
+    .event-organiser {
+      display: block;
+      font-size: 0.9rem;
+      text-align: right;
+      margin-top: 20px;
+      &:before {
+        content: 'Organiser:';
+        margin-right: 0.5rem;
+      }
+    }
   }
 }
