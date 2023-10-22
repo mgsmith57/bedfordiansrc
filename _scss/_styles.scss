@@ -1,5 +1,7 @@
 :root {
   --palette-dark-blue: #051635;
+  --palette-red: #e3210d;
+  --palette-red-darker: #b72816;
   --palette-light-blue: #8ec4eb;
   --palette-lighter-blue: rgba(142, 196, 235, 0.3);
   --palette-lightest-blue: rgba(142, 196, 235, 0.1);
@@ -16,10 +18,34 @@
   font-family: 'Tenor Sans', sans-serif;
 }
 
+.text-center {
+  text-align: center;
+}
+
+.text-small {
+  font-size: 0.9rem;
+}
+
+.w100 {
+  width: 100%
+}
+
 body {
   margin: 0;
   padding: 0;
   font-size: 18px;
+}
+
+table {
+  margin-top: 2rem;
+
+  th {
+    text-align: left;
+    border-top: 1px dashed black;
+    border-bottom: 1px dashed black;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+  }
 }
 
 header {
@@ -146,8 +172,6 @@ nav {
   }
 }
 
-
-
 main {
   max-width: 600px;
   margin: 0 auto;
@@ -155,10 +179,23 @@ main {
   padding-left: calc(var(--nav-width) + 2rem);
   line-height: 1.5rem;
 
+  a {
+    color: var(--palette-red);
+    text-decoration: none;
+
+    &:focus,
+    &:active,
+    &:hover {
+      color: var(--palette-red-darker);
+      text-decoration: underline;
+    }
+  }
+
   p + p {
     padding-top: 2rem;
   }
 
+  dl + h3,
   p + h3 {
     padding-top: 2.5rem;
   }
@@ -166,5 +203,17 @@ main {
   img {
     border-radius: 5px;
     margin-top: 1.5rem;
+  }
+
+  dl {
+    padding-top: 2rem;
+  }
+
+  dt {
+    font-weight: 700;
+  }
+
+  dd {
+    margin-bottom: 0.25rem;
   }
 }
