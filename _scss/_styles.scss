@@ -13,6 +13,10 @@
   }
 }
 
+@counter-style paren-lower-alpha {
+  system: extends lower-alpha;
+  suffix: ") ";
+}
 
 * {
   font-family: 'Tenor Sans', sans-serif;
@@ -222,6 +226,45 @@ main {
   dd {
     margin-bottom: 0.25rem;
   }
+}
+
+.contract {
+  max-width: 800px;
+
+  h4 {
+    text-decoration: underline;
+  }
+
+  ol {
+    counter-reset: section;
+    list-style-type: none;
+    padding-left: 0;
+
+  }
+
+  li {
+    padding-top: 1rem;
+  }
+
+  > ol > li > ol > li::before,
+  h4:before {
+    counter-increment: section;
+    content: counters(section, ".") ". ";
+    font-weight: 700;
+  }
+
+  > ol > li > ol > li > ol {
+    counter-reset: subsection;
+    padding-left: 3rem;
+
+    > li {
+      list-style-type: paren-lower-alpha;
+      counter-increment: subsection;
+      content: counters(section, ".") ") ";
+      padding-top: 1rem;
+    }
+  }
+
 }
 
 .calendar {
