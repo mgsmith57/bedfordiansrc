@@ -22,5 +22,17 @@
         });
     }
 
+    function initCal() {
+        const monthsDivs = document.querySelectorAll(".calendar-month[data-date]");
+        const startOfMonth = new Date(new Date().getFullYear(), new Date().getMonth(), 1);
+        monthsDivs.forEach(it => {
+            const date = new Date(it.getAttribute('data-date'));
+            if (date < startOfMonth) {
+               it.style.display = 'none';
+            }
+        })
+    }
+
     initNav();
+    initCal();
 })();
