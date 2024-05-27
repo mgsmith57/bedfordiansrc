@@ -1,9 +1,38 @@
 ---
 layout: default
-title: Archive
+title: Ousel Archives
 ---
-{{site.archive_files}}-what
-{% assign files2 = site.archive_files %}
-{% for adf in files2 %}
-        {{adf}}sdd
-{% endfor %}
+
+<style>
+    img {
+        max-width: 300px;
+    }
+
+    a {
+        display: block;
+        min-width: 50%;
+    }
+    .text-right {
+        text-align: right;
+    }
+</style>
+{% assign files = site.data.archives %}
+<div>
+   {% for f in files %}
+        {% assign name = f.file | capitalize | replace: "-", " "  | replace: ".pdf" %}
+        {% if f.image %}
+            <a href="archives/{{f.file}}" class="text-right" target="_blank">
+                <figure>
+                    <img class="spotlight" src="archives/{{f.image}}" alt="{{f.image}}"/>
+                    <figcaption>{{name}}</figcaption>
+                </figure></a>
+
+        {% else %}
+            <a href="archives/{{f.file}}" target="_blank">{{name}} </a>
+        {% endif %}
+   {% endfor %}
+</div>
+
+<script src="https://rawcdn.githack.com/nextapps-de/spotlight/0.7.8/dist/spotlight.bundle.js"></script>
+
+

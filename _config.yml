@@ -14,9 +14,14 @@ baseurl:
 # Build settings
 markdown: kramdown
 
+include: ['_collections', '_pages', '_projects']
+
 sass:
   sass_dir: /_scss
 
 collections:
   archive_files:
     output: false
+
+gems:
+  - jekyll-sitemap
