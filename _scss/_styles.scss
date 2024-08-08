@@ -83,6 +83,10 @@ header {
   animation-duration: 10s;
   animation-timing-function: ease-in-out;
 
+  @media (max-width: 992px) {
+    min-height: 250px;
+  }
+
   a {
     text-decoration: none;
     color: white;
@@ -94,7 +98,7 @@ header {
 
   h1 {
     text-align: center;
-    font-size: 4rem;
+    font-size: 3.5rem;
     margin: 0;
     padding: 3rem 2rem;
     z-index: 2;
