@@ -57,14 +57,31 @@ figure {
   margin-right: 0;
 }
 
+@keyframes hero-pan {
+  0% {
+    background-size: 100%;
+    background-position: 50% 25%;
+  }
+  100% {
+    background-size: 120%;
+    background-position: center;
+  }
+}
+
 header {
   background-image: url('/img/brc1.jpg');
-  background-size: cover;
+  background-size: 120%;
   background-position: center;
+  //background-size: cover;
+  //background-position: center;
   background-blend-mode: lighten;
   display: flex;
   min-height: 360px;
   margin-left: var(--nav-width);
+
+  animation-name: hero-pan;
+  animation-duration: 10s;
+  animation-timing-function: ease-in-out;
 
   a {
     text-decoration: none;
