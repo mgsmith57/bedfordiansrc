@@ -252,6 +252,10 @@ main {
   dd {
     margin-bottom: 0.25rem;
   }
+
+  ul li {
+    margin-bottom: 0.75rem;
+  }
 }
 
 .contract {
@@ -291,6 +295,13 @@ main {
     }
   }
 
+}
+
+h3.embolden {
+  background: var(--palette-dark-blue);
+  color: white;
+  padding: 0.3rem;
+  margin-top: 1.5rem;
 }
 
 .calendar {
