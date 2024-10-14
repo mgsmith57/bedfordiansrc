@@ -57,6 +57,22 @@ figure {
   margin-right: 0;
 }
 
+.figure-box {
+  @media (min-width: 992px) {
+    display: flex;
+
+    figure {
+      flex-grow: 1;
+      align-content: center;
+
+      + figure {
+        padding-left: 1rem;
+      }
+    }
+  }
+}
+
+
 @keyframes hero-pan {
   0% {
     background-size: 100%;
