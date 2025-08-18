@@ -5,6 +5,7 @@
   --palette-light-blue: #8ec4eb;
   --palette-lighter-blue: rgba(142, 196, 235, 0.3);
   --palette-lightest-blue: rgba(142, 196, 235, 0.1);
+  --palette-green: #1d9410;
   --screen-small: 768px;
   --nav-width: 250px;
 
@@ -364,6 +365,11 @@ h3.embolden {
       background: var(--palette-red);
     }
 
+    &.county:before {
+      content: "County Team";
+      background: var(--palette-green);
+    }
+
     .event-day {
       position: absolute;
       left: 0;
@@ -380,6 +386,10 @@ h3.embolden {
       margin-right: 1.5rem;
       background: antiquewhite;
       text-align: center;
+
+      sup {
+        font-size: 1rem;
+      }
     }
 
     .event-organiser {
