@@ -38,8 +38,8 @@ hero: brc11b.jpg
             <animateTransform
                     attributeName="transform"
                     type="translate"
-                    values="0 0; 0 220; 0 0"
-                    keyTimes="0; 0.5; 1"
+                    values="0 0; 0 0; 0 220; 0 220; 0 0"
+                    keyTimes="0.0; 0.2; 0.55; 0.65; 1"
                     dur="3s"
                     fill="freeze"
                     repeatCount="1"/>
@@ -48,22 +48,20 @@ hero: brc11b.jpg
         <!-- Marker (animated once) -->
         <g id="marker">
 
+            <!-- Shot sticker -->
+            <circle cx="186" cy="132" r="5" fill="orange" stroke-width="0"/>
+
             <!-- Target board -->
             <rect x="230" y="190" width="20" height="20" fill="orange" stroke="black" stroke-width="3" transform="rotate(35 240 200)"/>
             <circle cx="240" cy="200" r="3" fill="black" stroke-width="0"/>
 
-<!--            &lt;!&ndash; Scoring rings &ndash;&gt;-->
-<!--            <circle cx="200" cy="135" r="50" fill="black" stroke="white" stroke-width="1.5"/>-->
-<!--            <circle cx="200" cy="135" r="30" fill="black" stroke="white" stroke-width="1.5"/>-->
-<!--            <circle cx="200" cy="135" r="15" fill="black" stroke="white" stroke-width="1.5"/>-->
-<!--            <circle cx="200" cy="135" r="10" fill="black" stroke="white" stroke-width="1.5"/>-->
 
             <!-- Single drop and raise -->
             <animateTransform
                     attributeName="transform"
                     type="translate"
-                    values="0 0; 0 220; 0 200"
-                    keyTimes="0; 0.5; 1"
+                    values="0 0; 0 0; 0 220; 0 220"
+                    keyTimes="0; 0.2; 0.55; 1"
                     dur="3s"
                     fill="freeze"
                     repeatCount="1"/>
