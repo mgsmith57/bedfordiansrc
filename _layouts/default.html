@@ -19,7 +19,7 @@
 <body>
 
 <header class="{{page.headerClass}}" style="background-image:url(/img/{{page.hero | default: "brc1.jpg" }})">
-    <a href="{{page.homeLink | default: '/'}}"><h1>{{page.title}}</h1></a>
+    <h1>{{page.title}}</h1>
 
     <button class="nav-icon" aria-label="Main menu toggle button">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="height: 3rem; width: 3rem;">
@@ -46,7 +46,7 @@
     </ul>
 </nav>
 
-<main class="{{page.mainClass}}">
+<main class="{{page.mainClass}}" id="content">
     {{ content }}
 </main>
 
