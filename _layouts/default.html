@@ -14,14 +14,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mulish:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/default.css?cb=7">
+    <link rel="stylesheet" href="/css/default.css?cb=8">
 </head>
 <body>
 
 <header class="{{page.headerClass}}" style="background-image:url(/img/{{page.hero | default: "brc1.jpg" }})">
     <a href="{{page.homeLink | default: '/'}}"><h1>{{page.title}}</h1></a>
 
-    <button class="nav-icon">
+    <button class="nav-icon" aria-label="Main menu toggle button">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="height: 3rem; width: 3rem;">
             <path d="M0 0h512v512H0z" fill="transparent"></path>
             <g class="" transform="translate(0,0)">
@@ -33,7 +33,7 @@
 
 <nav>
     <div class="logo-container">
-        <img src="img/logo-new-2.png" />
+        <img src="img/logo-new-2.png" alt="Bedfordians rifle club logo"/>
     </div>
     <ul>
         <li><a href="/">Welcome</a></li>
