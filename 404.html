@@ -1,0 +1,84 @@
+---
+layout: default
+title: Message 4
+hero: brc11b.jpg
+---
+
+<h3 class="text-center">Cease Fire! – Target Not Found</h3>
+
+<p class="text-center">
+    Looks like you fired at the wrong target.
+</p>
+
+<div class="text-center">
+    <svg width="400" height="300" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+        <!-- Sky -->
+        <rect width="400" height="500" fill="#cfe8ff"/>
+
+        <!-- Target carrier frame -->
+        <rect x="110" y="40" width="180" height="420" fill="#8b5a2b"/>
+
+        <!-- Sky -->
+        <rect x="125" y="225" width="150" height="35" fill="#cfe8ff"/>
+        <rect x="125" y="60" width="150" height="150" fill="#cfe8ff"/>
+
+        <!-- Target group (animated once) -->
+        <g id="target">
+
+            <!-- Target board -->
+            <rect x="125" y="60" width="150" height="150" fill="white" stroke="black" stroke-width="2"/>
+
+            <!-- Scoring rings -->
+            <circle cx="200" cy="135" r="50" fill="black" stroke="white" stroke-width="1.5"/>
+            <circle cx="200" cy="135" r="30" fill="black" stroke="white" stroke-width="1.5"/>
+            <circle cx="200" cy="135" r="15" fill="black" stroke="white" stroke-width="1.5"/>
+            <circle cx="200" cy="135" r="10" fill="black" stroke="white" stroke-width="1.5"/>
+
+            <!-- Single drop and raise -->
+            <animateTransform
+                    attributeName="transform"
+                    type="translate"
+                    values="0 0; 0 220; 0 0"
+                    keyTimes="0; 0.5; 1"
+                    dur="3s"
+                    fill="freeze"
+                    repeatCount="1"/>
+        </g>
+
+        <!-- Marker (animated once) -->
+        <g id="marker">
+
+            <!-- Target board -->
+            <rect x="230" y="190" width="20" height="20" fill="orange" stroke="black" stroke-width="3" transform="rotate(35 240 200)"/>
+            <circle cx="240" cy="200" r="3" fill="black" stroke-width="0"/>
+
+<!--            &lt;!&ndash; Scoring rings &ndash;&gt;-->
+<!--            <circle cx="200" cy="135" r="50" fill="black" stroke="white" stroke-width="1.5"/>-->
+<!--            <circle cx="200" cy="135" r="30" fill="black" stroke="white" stroke-width="1.5"/>-->
+<!--            <circle cx="200" cy="135" r="15" fill="black" stroke="white" stroke-width="1.5"/>-->
+<!--            <circle cx="200" cy="135" r="10" fill="black" stroke="white" stroke-width="1.5"/>-->
+
+            <!-- Single drop and raise -->
+            <animateTransform
+                    attributeName="transform"
+                    type="translate"
+                    values="0 0; 0 220; 0 200"
+                    keyTimes="0; 0.5; 1"
+                    dur="3s"
+                    fill="freeze"
+                    repeatCount="1"/>
+        </g>
+
+        <!-- Butts -->
+        <rect x="0" y="260" width="400" height="140" fill="#654321"/>
+
+        <!-- Ground line -->
+        <rect x="0" y="250" width="400" height="10" fill="#4f7942"/>
+
+    </svg>
+</div>
+
+<p class="text-center">
+    Let’s reset your sights. <a href="/">Return home</a>
+</p>
+
