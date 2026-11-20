@@ -384,8 +384,8 @@ h3.embolden {
 
   .calendar-event {
     clear: both;
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0;
     padding-left: 6rem;
     border-top: 1px solid var(--palette-dark-blue);
     position: relative;
@@ -418,7 +418,7 @@ h3.embolden {
     .event-day {
       position: absolute;
       left: 0;
-      top: 1.5rem;
+      top: 0.5rem;
       font-size: 2rem;
       display: block;
       min-width: 4rem;
